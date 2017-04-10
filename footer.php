@@ -21,14 +21,16 @@
             <ul class="social-icons">
             <?php
             $social_media_icons = get_theme_mod('alps_social_media_icons');
-            $social_media_icons_decoded = json_decode($social_media_icons);
-            foreach ($social_media_icons_decoded as $social_media_icon) : ?>
+            if (!empty($social_media_icons)) :
+                $social_media_icons_decoded = json_decode($social_media_icons);
+                foreach ($social_media_icons_decoded as $social_media_icon) : ?>
 
-                <a href="<?php echo esc_url($social_media_icon->link); ?>">
-                    <span class="fa <?php echo esc_attr($social_media_icon->icon_value); ?>"></span>
-                </a>
+                    <a href="<?php echo esc_url($social_media_icon->link); ?>">
+                        <span class="fa <?php echo esc_attr($social_media_icon->icon_value); ?>"></span>
+                    </a>
 
-            <?php endforeach; ?>
+                <?php endforeach;
+            endif; ?>
             </ul>
 
 		</div><!-- .site-info -->

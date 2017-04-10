@@ -120,10 +120,6 @@ function alps_scripts() {
 
 	wp_enqueue_script( 'alps-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'alps_scripts' );
 
@@ -157,14 +153,20 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  *  Custom Post-Type "Course"
  */
-
 function alps_custom_post_type () {
 
     $types = array(
+
         array(
-            'type' => 'course',
-            'singular' => 'Course',
-            'plural' => 'Courses'
+            'type' => 'in_house_course',
+            'singular' => 'In House Course',
+            'plural' => 'In House Courses'
+        ),
+
+        array(
+            'type' => 'public_course',
+            'singular' => 'Public Course',
+            'plural' => 'Public Courses'
         ),
 
         array(
@@ -209,8 +211,7 @@ function alps_custom_post_type () {
                 'title',
                 'editor'
             ),
-            'menu_position' => 5,
-            'rewrite' => $rewrite
+            'menu_position' => 5
         );
         register_post_type($type, $args);
     }
@@ -232,12 +233,12 @@ function change_default_title( $title ){
 add_filter( 'enter_title_here', 'change_default_title' );
 
 
-
 function alps_customizer_style() {
     wp_register_style( 'customizer_stylesheet', get_template_directory_uri() . '/css/admin-style.css', '1.0.0');
     wp_enqueue_style( 'customizer_stylesheet' );
 }
 add_action( 'admin_enqueue_scripts', 'alps_customizer_style', 10);
+
 
 function alps_customizer_script() {
     wp_register_script( 'customizer_script', get_template_directory_uri() . '/js/alps-customizer.js',
@@ -250,6 +251,7 @@ add_action( 'customize_controls_enqueue_scripts', 'alps_customizer_script');
 function alps_make_protocol_relative_url( $url ) {
     return preg_replace( '(https?://)', '//', $url );
 }
+
 
 function remove_admin_menus() {
     remove_menu_page( 'edit-comments.php' );
