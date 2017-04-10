@@ -33,6 +33,8 @@
             endif; ?>
             </ul>
 
+            <?php get_template_part( 'template-parts/navigation/navigation', 'footer' ); ?>
+
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
