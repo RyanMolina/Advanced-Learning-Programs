@@ -40,10 +40,7 @@
                         </a>
 
 
-
                     </div> <!-- .navbar-header-->
-
-
 
                     <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 

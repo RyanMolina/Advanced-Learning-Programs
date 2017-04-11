@@ -89,10 +89,6 @@ function alps_customize_register( $wp_customize ) {
     ));
 
 
-    $wp_customize->add_section( 'alps_social_media_link_section' , array(
-        'title' => esc_html__( 'Social Media Link', 'alps' ),
-        'panel' => 'alps_footer_panel',
-    ));
 
 
     /*
@@ -101,6 +97,12 @@ function alps_customize_register( $wp_customize ) {
     Socials icons
 
     */
+
+    $wp_customize->add_section( 'alps_social_media_link_section' , array(
+        'title' => esc_html__( 'Social Media Link', 'alps' ),
+        'panel' => 'alps_footer_panel',
+    ));
+
 
     $wp_customize->add_setting( 'alps_social_media_icons', array(
         'sanitize_callback' => 'alps_sanitize_repeater',
@@ -121,6 +123,28 @@ function alps_customize_register( $wp_customize ) {
         'customizer_text_control' => false,
         'customizer_link_control' => true,
     )));
+
+    /**
+     * Footer
+     * Email Address
+     */
+     $wp_customize->add_section('alps_email_address_section', array(
+        'title' => esc_html__('Email Address', 'alps'),
+        'panel' => 'alps_footer_panel',
+    ));
+
+    $wp_customize->add_setting( 'alps_email_address', array (
+        'sanitize_callback' => 'alps_sanitize_input',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control( 'alps_email_address', array (
+        'label' => esc_html__( 'Email Address', 'alps' ),
+        'section' => 'alps_email_address_section',
+    ));
+
+
+
 
 
 }
