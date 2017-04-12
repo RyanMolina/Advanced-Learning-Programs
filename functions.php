@@ -114,6 +114,8 @@ function alps_scripts() {
 
 	wp_enqueue_style( 'alps-stamp-icons', get_template_directory_uri() . '/inc/icon-picker/css/stamp-icons.min.css');
 
+    wp_enqueue_style( 'alps-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
+
     wp_enqueue_script( 'alps-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.7', true );
 
 	wp_enqueue_script( 'alps-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

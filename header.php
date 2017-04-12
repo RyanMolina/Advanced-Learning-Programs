@@ -22,33 +22,48 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'alps' ); ?></a>
+	<header id="masthead" class="site-header left" role="banner">
+        <div class="bottom-header">
+        <div class="ed-container">
+            <div class="site-branding">
+                <div class="site-logo">
+                    <a class="custom-logo-link" href="<?php echo get_home_url(); ?>" rel="home">
+                        <img class="custom-logo" src="<?php echo get_theme_mod( 'alps_logo' ); ?>" alt="<?php bloginfo( 'title' ); ?>" />
+                    </a>
+                </div> <!--.site-logo-->
+            </div> <!--.site-branding-->
 
-	<header id="masthead" class="site-header" role="banner">
-        <div class="overlay-layer-nav sticky-navigation-open">
-            <!-- FIXED NAVIGATION -->
-            <div class="navbar bs-docs-nav navbar-fixed-top sticky-navigation appear-on-scroll">
-                <!-- .container -->
-                <div class="container">
+            <div class="wrap-right">
+                <div class="header-call-to">
+                    <p>
+                        <?php echo get_theme_mod( 'alps_contact_number' ); ?>
+                    </p>
+                    <a href="#">
+                        <i class="fa fa-mobile"></i>
+                        <?php echo get_theme_mod( 'alps_email_address'); ?>
+                    </a>
+                </div>
+            </div> <!--.contact-block-->
+        </div><!--.header-container-->
+        <div class="menu-wrap">
+            <div class="ed-container">
 
-                    <div class="navbar-header">
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wp-store' ); ?></button>
+                    <div class="close"> &times; </div>
+                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                </nav><!-- #site-navigation -->
 
-                        <!-- LOGO -->
-                        <?php $alps_logo = get_theme_mod( 'alps_logo' ); ?>
-
-                        <a href="<?php esc_url( home_url( '/' ) ) ?>" class="navbar-brand" title="<?php bloginfo( 'title' ); ?>">
-                            <img src="<?php echo $alps_logo; ?>" alt="<?php bloginfo( 'title' ); ?>" />
-                        </a>
-
-
-                    </div> <!-- .navbar-header-->
-
-                    <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-
-                </div> <!-- .container -->
-
-            </div> <!--FIXED NAVIGATION -->
+                <div class="header-search">
+                    <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
+                    <div class="search-box">
+                        <div class="close"> &times; </div>
+                        <?php get_template_part('searchform-header'); ?>
+                    </div>
+                </div> <!--  search-form-->
+            </div><!--.header-container-->
+        </div><!--.header-menu_wrap-->
         </div>
-
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
