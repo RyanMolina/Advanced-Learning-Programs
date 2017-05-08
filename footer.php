@@ -10,36 +10,19 @@
  */
 
 ?>
-
 	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-
-            <?php echo get_theme_mod('alps_contact_number'); ?>
-
-            <ul class="social-icons">
-            <?php
-            $social_media_icons = get_theme_mod('alps_social_media_icons');
-            if (!empty($social_media_icons)) :
-                $social_media_icons_decoded = json_decode($social_media_icons);
-                foreach ($social_media_icons_decoded as $social_media_icon) : ?>
-
-                    <a href="<?php echo esc_url($social_media_icon->link); ?>">
-                        <span class="fa <?php echo esc_attr($social_media_icon->icon_value); ?>"></span>
-                    </a>
-
-                <?php endforeach;
-            endif; ?>
-            </ul>
-
-            <?php get_template_part( 'template-parts/navigation/navigation', 'footer' ); ?>
-
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<a class="hidden-print" href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script>
+    $(document).ready(function() {
+        $('.drawer').drawer();
+    });
+</script>
+<script>
+    new UISearch( document.getElementById( 'sb-search' ) );
+    new UISearch( document.getElementById( 'search' ) );
+</script>
 </body>
 </html>

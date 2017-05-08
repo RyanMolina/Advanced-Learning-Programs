@@ -6,59 +6,24 @@
  *
  * @package ALPS
  */
-
-get_header(); ?>
-
+get_header('404'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'alps' ); ?></h1>
+			<section>
+				<header class="error-404-header container">
+					<?php $logo = get_theme_mod( 'alps_logo' );?>
+          <a class="site-link" href="<?php echo esc_url(home_url( '/' )); ?>" rel="home" title="<?php bloginfo( 'title' ); ?>">
+            <img class="site-logo img-centered" src="<?php echo $logo; ?>" alt="<?php bloginfo( 'title' ); ?>"/>
+          </a>
+					<h1 class="page-title title is-1 has-text-centered"><i class="fa fa-frown-o" aria-hidden="true"></i><?php esc_html_e( ' Oops! That page can&rsquo;t be found.', 'alps' ); ?></h1>
 				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'alps' ); ?></p>
-
-					<?php
-						get_search_form();
-
-						the_widget( 'WP_Widget_Recent_Posts' );
-
-						// Only show the widget if site has multiple categories.
-						if ( alps_categorized_blog() ) :
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'alps' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'alps' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
+				<div class="page-content container">
+					<p class="title is-5 has-text-centered">The link you clicked may be broken or the page may have been removed.</p>
+					<p class="subtitle is-6 has-text-centered">Visit the <a href="#">Homepage</a> or <a href="#">Contact Us</a> about the problem.</p>
+					<div class="error-404 has-text-centered">404</div>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php
-get_footer();
+get_footer('404');

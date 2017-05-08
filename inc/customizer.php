@@ -58,8 +58,6 @@ function alps_customize_register( $wp_customize ) {
             )
         )
     );
-
-
    /*
     * Footer
     */
@@ -67,28 +65,60 @@ function alps_customize_register( $wp_customize ) {
     require_once( 'class/general-customizer-control.php' );
 
 
-    $wp_customize->add_panel('alps_footer_panel', array(
+    $wp_customize->add_panel('alps_contact_panel', array(
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => esc_html__( 'Footer Section', 'alps')
+        'title' => esc_html__( 'Contact Section', 'alps')
     ));
 
-    $wp_customize->add_section('alps_contact_number_section', array(
-        'title' => esc_html__('Contact Number', 'alps'),
-        'panel' => 'alps_footer_panel',
+
+    $wp_customize->add_section('alps_phone_number_section', array(
+        'title' => esc_html__('Phone Number', 'alps'),
+        'panel' => 'alps_contact_panel',
     ));
 
-    $wp_customize->add_setting( 'alps_contact_number', array (
+    $wp_customize->add_setting( 'alps_phone_number', array (
         'sanitize_callback' => 'alps_sanitize_input',
         'transport' => 'postMessage'
     ));
 
-    $wp_customize->add_control( 'alps_contact_number', array (
-        'label' => esc_html__( 'Contact Number', 'alps' ),
-        'section' => 'alps_contact_number_section',
+    $wp_customize->add_control( 'alps_phone_number', array (
+        'label' => esc_html__( 'Phone Number', 'alps' ),
+        'section' => 'alps_phone_number_section',
     ));
 
 
+	$wp_customize->add_section('alps_globe_number_section', array(
+        'title' => esc_html__('GLOBE Number', 'alps'),
+        'panel' => 'alps_contact_panel',
+    ));
+
+    $wp_customize->add_setting( 'alps_globe_number', array (
+        'sanitize_callback' => 'alps_sanitize_input',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control( 'alps_globe_number', array (
+        'label' => esc_html__( 'GLOBE Number', 'alps' ),
+        'section' => 'alps_globe_number_section',
+    ));
+
+
+
+	$wp_customize->add_section('alps_smart_number_section', array(
+        'title' => esc_html__('SMART Number', 'alps'),
+        'panel' => 'alps_contact_panel',
+    ));
+
+    $wp_customize->add_setting( 'alps_smart_number', array (
+        'sanitize_callback' => 'alps_sanitize_input',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control( 'alps_smart_number', array (
+        'label' => esc_html__( 'SMART Number', 'alps' ),
+        'section' => 'alps_smart_number_section',
+    ));
 
 
     /*
@@ -100,7 +130,7 @@ function alps_customize_register( $wp_customize ) {
 
     $wp_customize->add_section( 'alps_social_media_link_section' , array(
         'title' => esc_html__( 'Social Media Link', 'alps' ),
-        'panel' => 'alps_footer_panel',
+        'panel' => 'alps_contact_panel',
     ));
 
 
@@ -130,7 +160,7 @@ function alps_customize_register( $wp_customize ) {
      */
      $wp_customize->add_section('alps_email_address_section', array(
         'title' => esc_html__('Email Address', 'alps'),
-        'panel' => 'alps_footer_panel',
+        'panel' => 'alps_contact_panel',
     ));
 
     $wp_customize->add_setting( 'alps_email_address', array (
@@ -141,6 +171,7 @@ function alps_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'alps_email_address', array (
         'label' => esc_html__( 'Email Address', 'alps' ),
         'section' => 'alps_email_address_section',
+		'type' => 'email'
     ));
 
 
@@ -218,4 +249,3 @@ function alps_sanitize_repeater( $input ) {
 
     return $input;
 }
-

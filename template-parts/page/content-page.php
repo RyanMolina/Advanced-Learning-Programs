@@ -10,19 +10,18 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="entry-header">
-        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+    <?php
+    $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+    $bg = 'background: #777 url('.$url.') no-repeat center; background-size: cover; background-blend-mode: multiply;';
+    ?>
+    <header class="entry-header entry-header--thin overlay--dark" style="<?php echo $bg; ?>">
+		<div class="entry-header-text container">
+        	<?php the_title( '<h1 class="entry-title has-text-shadow">', '</h1>' ); ?>
+		</div>
     </header><!-- .entry-header -->
 
-    <div class="entry-content">
-        <?php
-        the_content();
-
-        wp_link_pages( array(
-            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'alps' ),
-            'after'  => '</div>',
-        ) );
-        ?>
+    <div class="entry-content container">
+        <?php the_content();?>
     </div><!-- .entry-content -->
 
     <?php if ( get_edit_post_link() ) : ?>

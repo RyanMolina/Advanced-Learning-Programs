@@ -12,16 +12,11 @@
  *
  * @package ALPS
  */
-
 get_header(); ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-            <!-- TODO: FRONT-PAGE -->
-
+			<?php echo do_shortcode('[wonderplugin_slider id=1]'); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php
-//get_footer();
+get_footer();
