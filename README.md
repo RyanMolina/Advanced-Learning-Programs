@@ -2,4 +2,4 @@
 
 ## Dependency
 ### For the carousel
- 	[title](https://www.wonderplugin.com/)
+[title](https://www.wonderplugin.com/)
