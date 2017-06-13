@@ -77,6 +77,8 @@ class General_Customizer_Control extends WP_Customize_Control {
      */
     public $customizer_socials_repeater_control = false;
 
+    public $customizer_title = 'Click me';
+
     /**
      * Class constructor
      *
@@ -84,9 +86,9 @@ class General_Customizer_Control extends WP_Customize_Control {
      * @param integer $id Id.
      * @param array   $args Array of parameters.
      */
-    public function __construct( $manager, $id, $args = array() ) {
+    public function __construct( $manager, $id, $title, $args = array()) {
         parent::__construct( $manager, $id, $args );
-
+        $this->customizer_title = $title;
         if ( ! empty( $args['customizer_image_control'] ) ) {
             $this->customizer_image_control = $args['customizer_image_control'];
         }
@@ -161,11 +163,10 @@ class General_Customizer_Control extends WP_Customize_Control {
      * Enqueue required scripts and styles.
      */
     public function enqueue() {
-        wp_enqueue_style( 'customizer-font-awesome', get_template_directory_uri() . ( '/css/font-awesome.min.css' ),'4.7' );
+        wp_enqueue_style( 'customizer-font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
         wp_enqueue_script( 'customizer-iconpicker', get_template_directory_uri() . ( '/inc/icon-picker/js/iconpicker-engine.min.js' ), array( 'jquery' ), '1.0.2', true );
         wp_enqueue_script( 'customizer-iconpicker-control', get_template_directory_uri() . ( '/inc/icon-picker/js/iconpicker-control.js' ), array( 'jquery' ), '1.0.0', true );
         wp_enqueue_style( 'customizer-iconpicker', get_template_directory_uri() . ( '/inc/icon-picker/css/iconpicker.min.css' ) );
-        wp_enqueue_style( 'customizer-stamp-icons', get_template_directory_uri() . ( '/inc/icon-picker/css/stamp-icons.min.css' ),array(), '4.5.0' );
     }
 
 
@@ -325,7 +326,7 @@ class General_Customizer_Control extends WP_Customize_Control {
             foreach ( $array as $icon ) {  ?>
                 <div class="customizer_general_control_repeater_container customizer_draggable">
                     <div class="customizer-customize-control-title">
-                        <?php esc_html_e( 'SOCIAL LINK','alps' )?>
+                        <?php esc_html_e( $this->customizer_title, 'alps' )?>
                     </div>
                     <div class="customizer-box-content-hidden">
                         <?php
@@ -404,7 +405,7 @@ class General_Customizer_Control extends WP_Customize_Control {
 
                         if ( $this->customizer_shortcode_control == true ) {
                             $this->input_control(array(
-                                'label' => __( 'Shortcode','alps' ),
+                                'label' => __( 'Link Name','alps' ),
                                 'class' => 'customizer_shortcode_control',
                             ), $shortcode);
                         }
@@ -422,8 +423,7 @@ class General_Customizer_Control extends WP_Customize_Control {
             }// End foreach().
         } else { ?>
             <div class="customizer_general_control_repeater_container">
-                <div
-                        class="customizer-customize-control-title"><?php esc_html_e( 'customizer One', 'alps' ) ?></div>
+                <div class="customizer-customize-control-title"><?php esc_html_e( 'ALPs', 'alps' ) ?></div>
                 <div class="customizer-box-content-hidden">
                     <?php
                     if ( $this->customizer_image_control == true && $this->customizer_icon_control == true ) {

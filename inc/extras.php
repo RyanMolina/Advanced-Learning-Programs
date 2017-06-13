@@ -14,20 +14,15 @@
  * @return array
  */
 function alps_body_classes( $classes ) {
-	// Adds a class of group-blog to blogs with more than 1 published author.
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
-
-	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
-
+	$classes[] = 'drawer drawer--left';
 	return $classes;
 }
 add_filter( 'body_class', 'alps_body_classes' );
 
+// function alps_post_classes( $classes ) {
+// 	$classes[] = 'col'
+// }
+// add_filter('post_class','alps_post_classes');
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */

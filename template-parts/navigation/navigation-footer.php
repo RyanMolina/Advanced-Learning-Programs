@@ -2,8 +2,8 @@
     <?php
     wp_nav_menu(
         array(
-            'theme_location'    => 'primary',
-            'menu_id'           => 'primary-menu small-text'
+            'theme_location'    => 'footer',
+            'menu_id'           => 'primary-menu'
         )
     );
     ?>
