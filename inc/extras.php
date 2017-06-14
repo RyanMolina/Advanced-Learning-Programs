@@ -19,7 +19,10 @@ function alps_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'alps_body_classes' );
 
-
+// function alps_post_classes( $classes ) {
+// 	$classes[] = 'col'
+// }
+// add_filter('post_class','alps_post_classes');
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */

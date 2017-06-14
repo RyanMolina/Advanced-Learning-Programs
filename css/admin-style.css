@@ -1,206 +1,87 @@
-.customize-control-title {
-	margin-top: 15px;
-	color: rgb(0, 142, 214);
-}
-
-.customizer_repeater_container,
-.customizer_general_control_repeater_container {
-	float: left;
-	width: 100%;
-}
-
-.customizer_repeater_container .customizer-box-content-hidden,
-.customizer_general_control_repeater_container .customizer-box-content-hidden {
-	padding: 5px;
-	padding-top: 0;
-	border: 1px solid #dfdfdf;
-	border-top: 0;
-}
-
-button.customizer_remove_field {
-	display: inline-block;
-	float: right;
-	width: 25% !important;
-	height: 57px !important;
-	line-height: 17px !important;
-	white-space: initial !important;
-}
-
-button.customizer_general_control_remove_field {
-	width: 100%;
-	margin-top: 10px!important;
-}
-
-button.customizer_general_control_remove_field:hover {
-	border: 0;
-	color: #fff!important;
-	background-color: #00a0d2!important;
-}
-
-.customizer_repeater_container .customizer_icon_link,
-.customizer_general_control_repeater_container .customizer_text_control,
-.customizer_general_control_repeater_container .customizer_link_control {
-	width: 100% !important;
-	margin: 3px 0 0 !important;
-}
-
-.customizer_repeater_container .customizer_icons,
-.customizer_general_control_repeater_container .customizer_icon_control {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-#customizer_new_field,
-#customizer_general_control_new_field {
-	width: 100%;
-}
-
-.customize-control-widget_form .widget-control-save {
-	display: block !important;
-}
-
-.customizer_our_services_image_control {
-	display: none;
-}
-
-.customizer_our_services_icon_control {
-	display: none;
-}
-
-.customizer_general_control_repeater_container .customizer-box-content-hidden {
-	display: none;
-}
-
-.customizer-box-content-hidden {
+.customize-control-title{margin-top:15px;color:rgb(0,142,214)}.customizer_repeater_container,.customizer_general_control_repeater_container{float:left;width:100%}.customizer_repeater_container .customizer-box-content-hidden,.customizer_general_control_repeater_container .customizer-box-content-hidden{padding:5px;padding-top:0;border:1px solid #dfdfdf;border-top:0}button.customizer_remove_field{display:inline-block;float:right;width:25%!important;height:57px!important;line-height:17px!important;white-space:initial!important}button.customizer_general_control_remove_field{width:100%;margin-top:10px!important}button.customizer_general_control_remove_field:hover{border:0;color:#fff!important;background-color:#00a0d2!important}.customizer_repeater_container .customizer_icon_link,.customizer_general_control_repeater_container .customizer_text_control,.customizer_general_control_repeater_container .customizer_link_control{width:100%!important;margin:3px 0 0!important}.customizer_repeater_container .customizer_icons,.customizer_general_control_repeater_container .customizer_icon_control{width:100%;margin:0;padding:0}#customizer_new_field,#customizer_general_control_new_field{width:100%}.customize-control-widget_form .widget-control-save{display:block!important}.customizer_our_services_image_control{display:none}.customizer_our_services_icon_control{display:none}.customizer_general_control_repeater_container .customizer-box-content-hidden{display:none}.customizer-box-content-hidden{background-color:#fff}.customizer-customize-control-title{overflow:hidden;height:40px;background-color:#fff;border:1px solid #dfdfdf;font-weight:700;line-height:40px!important;text-align:center}.customizer-customize-control-title:hover{border-color:#999;cursor:move!important}.customizer_image_control .custom_media_button_customizer{margin-top:5px}#customize-control-customizer_contact_form_shortcode{display:none}.customizer_radio_control{margin-top:0}.customizer_general_control_repeater_container .customizer-box-content-hidden{padding-top:5px}.customizer-alpha-container .transparency{width:100%;height:24px;padding:0;border-radius:3px;background-color:#fff;background-image:url(../images/transparency-grid.png);-webkit-box-shadow:0 0 5px rgba(0,0,0,.4) inset;box-shadow:0 0 5px rgba(0,0,0,.4) inset}.customizer-alpha-container .ui-slider-handle{position:absolute;z-index:2;height:20px;margin-top:-2px;padding:3px;border:1px solid #aaa;border-radius:4px;opacity:.9;color:#777;background-color:#fff;-webkit-box-shadow:0 1px 2px rgba(0,0,0,.2);box-shadow:0 1px 2px rgba(0,0,0,.2);text-shadow:0 1px 0 #fff;font-size:12px;text-decoration:none;cursor:ew-resize}.customizer-alpha-container .ui-slider{position:relative;width:88%;text-align:center}.wp-picker-container a.wp-picker-open~div.customizer-alpha-container{display:block}.customizer-alpha-container{display:none;-webkit-box-sizing:padding-box;box-sizing:padding-box;padding:0 11px 6px;border:1px solid #dfdfdf;border-top:none;background:#fff}.customize-control-alphacolor .wp-picker-container .iris-picker{border-bottom:none}.customizer-icons{display:inline-block;padding:0 10px 0 0;vertical-align:middle}.customizer_remove_social_item{display:inline-block;border:none;color:red;background:none;font-weight:700;vertical-align:top;cursor:pointer}.customizer-social-repeater-container .dd-container{display:inline-block;width:100%;margin-top:20px}.customizer-social-repeater-container .dd-container:first-child{margin-top:10px}.customizer_social_repeater_link{width:215px!important}.customizer_add_social_item{margin-top:10px}.customizer-theme-info{text-align:center}.customizer-theme-info hr{margin:10px auto} .ui-datepicker {
 	background-color: #fff;
-}
-
-.customizer-customize-control-title {
-	overflow: hidden;
-	height: 40px;
-	background-color: #fff;
-	border: 1px solid #dfdfdf;
-	font-weight: bold;
-	line-height: 40px !important;
-	text-align: center;
-
-}
-
-.customizer-customize-control-title:hover {
-	border-color: #999;
-	cursor: move !important;
-}
-
-.customizer_image_control .custom_media_button_customizer {
-	margin-top: 5px;
-}
-
-#customize-control-customizer_contact_form_shortcode {
-	display: none;
-}
-
-.customizer_radio_control {
-	margin-top: 0;
-}
-
-.customizer_general_control_repeater_container .customizer-box-content-hidden {
-	padding-top: 5px;
-}
-
-
-.customizer-alpha-container .transparency {
-	width: 100%;
-	height: 24px;
-	padding: 0;
-	border-radius: 3px;
-	background-color: #fff;
-	background-image: url(../images/transparency-grid.png);
-	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.4) inset;
-	box-shadow: 0 0 5px rgba(0,0,0,0.4) inset;
-}
-
-.customizer-alpha-container .ui-slider-handle {
-	position: absolute;
-	z-index: 2;
-	height: 20px;
-	margin-top: -2px;
-	padding: 3px;
-	border: 1px solid #aaa;
+	border: 1px solid #66AFE9;
 	border-radius: 4px;
-	opacity: 0.9;
-	color: #777;
-	background-color: #fff;
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-	text-shadow: 0 1px 0 #fff;
-	font-size: 12px;
-	text-decoration: none;
-	cursor: ew-resize;
+	box-shadow: 0 0 8px rgba(102,175,233,.6);
+	display: none;
+	margin-top: 4px;
+	padding: 10px;
+	width: 240px;
 }
-
-.customizer-alpha-container .ui-slider {
-	position: relative;
-	width: 88%;
+.ui-datepicker a,
+.ui-datepicker a:hover {
+	text-decoration: none;
+}
+.ui-datepicker a:hover,
+.ui-datepicker td:hover a {
+	color: #2A6496;
+	-webkit-transition: color 0.1s ease-in-out;
+	   -moz-transition: color 0.1s ease-in-out;
+	     -o-transition: color 0.1s ease-in-out;
+	        transition: color 0.1s ease-in-out;
+}
+.ui-datepicker .ui-datepicker-header {
+	margin-bottom: 4px;
 	text-align: center;
 }
-
-.wp-picker-container a.wp-picker-open ~ div.customizer-alpha-container {
-	display: block;
+.ui-datepicker .ui-datepicker-title {
+	font-weight: 700;
 }
-
-.customizer-alpha-container {
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	cursor: default;
+	height: 20px;
+	line-height: 1;
+	margin-top: 2px;
+	width: 30px;
+}
+.ui-datepicker .ui-datepicker-prev {
+	float: left;
+	text-align: left;
+}
+.ui-datepicker .ui-datepicker-next {
+	float: right;
+	text-align: right;
+}
+.ui-datepicker .ui-datepicker-prev:before {
+	content: "<";
+}
+.ui-datepicker .ui-datepicker-next:before {
+	content: ">";
+}
+.ui-datepicker .ui-icon {
 	display: none;
-	-webkit-box-sizing: padding-box;
-	box-sizing: padding-box;
-	padding: 0 11px 6px;
-	border: 1px solid #dfdfdf;
-	border-top: none;
-	background: #fff;
 }
-
-.customize-control-alphacolor .wp-picker-container .iris-picker {
-	border-bottom: none;
+.ui-datepicker .ui-datepicker-calendar {
+  table-layout: fixed;
+	width: 100%;
 }
-
-.customizer-icons {
-	display: inline-block;
-	padding: 0 10px 0 0;
-	vertical-align: middle;
+.ui-datepicker .ui-datepicker-calendar th,
+.ui-datepicker .ui-datepicker-calendar td {
+	text-align: center;
+	padding: 4px 0;
 }
-
-.customizer_remove_social_item {
-	display: inline-block;
-	border: none;
-	color: #f00;
-	background: none;
-	font-weight: bold;
-	vertical-align: top;
+.ui-datepicker .ui-datepicker-calendar td {
+	border-radius: 4px;
+	-webkit-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+	   -moz-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+	     -o-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+	        transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+.ui-datepicker .ui-datepicker-calendar td:hover {
+	background-color: #eee;
 	cursor: pointer;
 }
-
-.customizer-social-repeater-container .dd-container {
-	display: inline-block;
-	width: 100%;
-	margin-top: 20px;
+.ui-datepicker .ui-datepicker-calendar td a {
+	text-decoration: none;
 }
-
-.customizer-social-repeater-container .dd-container:first-child {
-	margin-top: 10px;
+.ui-datepicker .ui-datepicker-current-day {
+	background-color: #4289cc;
 }
-
-.customizer_social_repeater_link {
-	width: 215px!important;
+.ui-datepicker .ui-datepicker-current-day a {
+	color: #fff
 }
-
-.customizer_add_social_item {
-	margin-top: 10px;
-}
-
-.customizer-theme-info {
-	text-align: center;
-}
-
-.customizer-theme-info hr {
-	margin: 10px auto;
+.ui-datepicker .ui-datepicker-calendar .ui-datepicker-unselectable:hover {
+	background-color: #fff;
+	cursor: default;
 }

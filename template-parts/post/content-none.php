@@ -9,9 +9,9 @@
 
 ?>
 
-<section class="container no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title title is-1 has-text-centered"><i class="fa fa-frown-o" aria-hidden="true"></i><?php esc_html_e( ' Oops! No courses matched your query.', 'alps' ); ?></h1>
+<section class="container">
+	<header class="jumbotron" style="background-color: transparent;">
+		<h1 class="text-center"><i class="fa fa-frown-o" aria-hidden="true"></i><?php esc_html_e( ' Oops! No courses matched your query.', 'alps' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">

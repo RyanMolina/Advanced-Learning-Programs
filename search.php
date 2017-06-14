@@ -19,21 +19,27 @@ get_header(); ?>
 			if ( have_posts() ) : ?>
 			<div class="container">
 				<?php
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
-					/**
-					 * Run the loop for the search to output the results.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-search.php and that will be used instead.
-					 */
-					get_template_part( 'template-parts/post/content', 'search' );
-				endwhile;
+				$types = array(
+					array('type' => 'public-course', 'title' => 'Public Course'),
+					array('type' => 'in-house-training', 'title' => 'In-House Training')
+				);
+				foreach($types as $type):
+					/* Start the Loop */
+					$post_type = array('post_type' => $type['type'], 'post_status' => 'publish', 'posts_per_page'=>-1, 'order' => 'asc', 'orderby' => 'post-date', 's' => get_search_query() );
+					$courses_query = new WP_query($post_type);
+					if($courses_query->have_posts()):
+					?>
+						<h1><?php echo $type['title']; ?></h1>
+						<?php 
+						while( $courses_query->have_posts()):
+							$courses_query->the_post();
+							get_template_part( 'template-parts/post/content', 'search' );
+						endwhile;
+					endif;
+				endforeach;
 			else :
-
 				get_template_part( 'template-parts/post/content', 'none' );
-
 			endif; ?>
-
 			</div>
 		</main><!-- #main -->
 	</section><!-- #primary -->

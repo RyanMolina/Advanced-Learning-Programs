@@ -14,7 +14,9 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="google-site-verification" content="9uumEKNWkcmzDMT4l-N4dHiaqwnKBZWPCxTOEoAPME8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msapplication-tap-highlight" content="no" />
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
 </head>

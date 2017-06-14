@@ -5,7 +5,6 @@
  * License : MIT
  * Author : blivesta <design@blivesta.com> (http://blivesta.com/)
  */
-
 ;(function umd(factory) {
   'use strict';
   if (typeof define === 'function' && define.amd) {
@@ -71,7 +70,7 @@
           });
 
           $(window).on('resize.' + namespace, function close() {
-            __.close.call(_this);
+            if(window.innerWidth >= 1024)  __.close.call(_this);
             return _this.iScroll.refresh();
           });
 
