@@ -68,7 +68,8 @@ get_header(); ?>
 								$lectures = get_post_meta(get_the_ID(), 'course_lectures', true);
 								get_template_part('template-parts/post/content', 'search');
 							endwhile; ?>
-						<a class="button button-plain button-border button-inverse button-pill alignright ellipsis" href="<?php echo esc_url(home_url( '/public-courses' )); ?>">View all Public Courses</a>
+						<a class="button button-plain button-border button-inverse button-pill alignright ellipsis" 
+						    href="<?php echo esc_url(get_permalink(get_page_by_title("Public Courses"))); ?>">View all Public Courses</a>
 					</div>
 				  	<?php endif; ?>
 					<?php
@@ -93,7 +94,8 @@ get_header(); ?>
 								$lectures = get_post_meta(get_the_ID(), 'course_lectures', true);
 								get_template_part('template-parts/post/content', 'search');
 								endwhile; ?>
-						<a class="button button-plain button-border button-inverse button-pill alignright ellipsis" href="<?php echo esc_url(home_url( '/in-house-training' )); ?>">View all In-House Courses</a>
+						<a class="button button-plain button-border button-inverse button-pill alignright ellipsis" 
+						    href="<?php echo esc_url(get_permalink(get_page_by_title("In-House Training"))); ?>">View all In-House Courses</a>
 					</div>
 					<?php endif; ?>
 			</section> <!-- Featured Courses -->
