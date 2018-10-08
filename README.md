@@ -1,5 +1,4 @@
-# Custom WordPress theme for [Advanced Learning Programs](https://alprograms.com/). (OJT Project)
-[Advanced Learning Programs](https://www.alprograms.com/)
+# Custom WordPress theme for [Advanced Learning Programs]
 ## Plugin used for the carousel
 [WonderPlugin](https://www.wonderplugin.com/)
 
